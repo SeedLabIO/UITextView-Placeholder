@@ -119,6 +119,18 @@
     [self updatePlaceholderLabel];
 }
 
+#pragma mark - `attributedPlaceholder`
+
+- (NSAttributedString *)attributedPlaceholder
+{
+    return self.placeholderLabel.attributedText;
+}
+
+- (void)setAttributedPlaceholder:(NSAttributedString *)attributedPlaceholder
+{
+    self.placeholderLabel.attributedText = attributedPlaceholder;
+    [self updatePlaceholderLabel];
+}
 
 #pragma mark `placeholderColor`
 
@@ -129,7 +141,6 @@
 - (void)setPlaceholderColor:(UIColor *)placeholderColor {
     self.placeholderLabel.textColor = placeholderColor;
 }
-
 
 #pragma mark - KVO
 
